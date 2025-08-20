@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="pt-24 sm:pt-28 md:pt-16 lg:pt-20 px-4 sm:px-6min-h-screen flex items-center pt-24 sm:pt-28 md:pt-16 lg:pt-20 px-4 sm:px-6"
+      className="pt-24 sm:pt-28 md:pt-16 lg:pt-20 px-4 sm:px-6min-h-screen flex items-center pt-24 sm:pt-28 md:pt-16 lg:pt-20 px-4 sm:px-6 pr-6 pl-6"
     >
       <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
         {/* Text Content */}
