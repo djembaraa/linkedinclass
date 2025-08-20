@@ -16,7 +16,10 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight"
           >
-            Unlock Your Career Potential with LinkedIn
+            <span className="font-bold text-[#0055DF]">
+              Belajar LinkedIn Class
+            </span>{" "}
+            – Unlock Your Career Potential with LinkedIn
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -48,7 +51,6 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          {/* 👇 Komponen Image diganti dengan Lottie 👇 */}
           <Lottie animationData={animationData} loop={true} />
         </motion.div>
       </div>
