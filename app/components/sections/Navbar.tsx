@@ -1,17 +1,25 @@
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
+// Pastikan link ini sudah benar untuk routing antar halaman
 const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#classes", label: "Classes" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/classes", label: "Classes" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm pl-6 pr-6">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#" className="flex items-center space-x-3">
           <img
@@ -40,7 +48,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation (VERSI BERSIH) */}
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
@@ -49,7 +57,13 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-full">
-              <nav className="flex flex-col items-center justify-center h-full space-y-4">
+              <SheetHeader>
+                <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
+                <SheetDescription className="sr-only">
+                  A list of navigation links for the site.
+                </SheetDescription>
+              </SheetHeader>
+              <nav className="flex flex-col items-center justify-center h-full space-y-4 -mt-8">
                 {navLinks.map((link) => (
                   <a
                     key={link.label}
