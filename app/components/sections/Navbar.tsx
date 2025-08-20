@@ -12,7 +12,7 @@ import {
 // Pastikan link ini sudah benar untuk routing antar halaman
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/classes", label: "Classes" },
+  { href: "/#classes", label: "Classes" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },
 ];
