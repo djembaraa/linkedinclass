@@ -24,7 +24,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-gray-600"
           >
-            Belajar personal branding & networking agar lebih cepat dapat kerja.
+            Aktif mempelajari strategi personal branding dan networking guna
+            membangun reputasi profesional serta memperluas koneksi, sehingga
+            peluang mendapatkan pekerjaan lebih cepat tercapai.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
