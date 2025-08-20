@@ -1,6 +1,7 @@
 import { Card, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import { MotionWrap } from "../MotionWrap";
+import { Button } from "@/components/ui/button";
 
 const featuresData = [
   {
@@ -18,12 +19,12 @@ export default function Features() {
         <MotionWrap className="text-center mb-12">
           <h2 className="text-3xl font-bold">Features</h2>
         </MotionWrap>
-        <div className="grid md:grid-cols-3 gap-8">
+
+        {/* Grid Card */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {featuresData.map((feature, index) => (
             <MotionWrap key={feature.title} delay={index * 0.2}>
-              {/* 👇 Perubahan besar ada di dalam komponen Card ini 👇 */}
               <Card className="relative overflow-hidden h-72 group">
-                {/* 1. Gambar sebagai Latar Belakang Absolut */}
                 <Image
                   src={feature.image}
                   alt={feature.title}
@@ -31,10 +32,8 @@ export default function Features() {
                   height={500}
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* 2. Lapisan Gradien untuk Keterbacaan Teks */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
 
-                {/* 3. Konten Teks di Atas Gambar */}
                 <div className="relative h-full flex flex-col justify-end p-6">
                   <CardTitle className="text-white text-lg">
                     {feature.title}
@@ -43,6 +42,16 @@ export default function Features() {
               </Card>
             </MotionWrap>
           ))}
+        </div>
+
+        {/* Tombol di bawah grid */}
+        <div className="text-center">
+          <Button
+            size="lg"
+            className="bg-blue-600 hover:bg-blue-700 text-white"
+          >
+            Explore Our Programs
+          </Button>
         </div>
       </div>
     </section>

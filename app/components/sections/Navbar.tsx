@@ -13,8 +13,15 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm pl-6 pr-6">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="font-bold text-xl">
-          Belajar LinkedIn
+        <a href="#" className="flex items-center space-x-3">
+          <img
+            src="/image/vector-education-logo.png"
+            alt="Belajar LinkedIn"
+            className="h-10 w-auto"
+          />
+          <span className="font-bold text-xl text-[#0055DF]">
+            Belajar LinkedIn
+          </span>
         </a>
 
         {/* Desktop Navigation */}
