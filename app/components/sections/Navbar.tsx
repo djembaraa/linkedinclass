@@ -48,13 +48,13 @@ export default function Navbar() {
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col space-y-4 mt-8">
+            <SheetContent side="right" className="w-full">
+              <nav className="flex flex-col items-center justify-center h-full space-y-4">
                 {navLinks.map((link) => (
                   <a
                     key={link.label}
                     href={link.href}
-                    className="text-lg text-gray-700 hover:text-blue-600"
+                    className="text-2xl text-gray-700 hover:text-blue-600 transition-colors py-2"
                   >
                     {link.label}
                   </a>
