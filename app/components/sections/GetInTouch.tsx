@@ -42,11 +42,8 @@ export default function GetInTouch() {
                 <Input id="email" type="email" placeholder="Enter your email" />
               </div>
               <div>
-                <Label htmlFor="message">Message</Label>
-                <Textarea
-                  id="message"
-                  placeholder="Type your message here ..."
-                />
+                <Label htmlFor="phone">Phone</Label>
+                <Input id="phone" type="tel" placeholder="08123456789" />
               </div>
               <div className="flex items-center space-x-2">
                 <Checkbox id="terms" />
@@ -58,7 +55,7 @@ export default function GetInTouch() {
                 type="submit"
                 className="w-full bg-blue-600 hover:bg-blue-700"
               >
-                Send Message
+                Submit
               </Button>
             </form>
           </MotionWrap>
